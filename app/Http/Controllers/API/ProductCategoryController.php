@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class ProductCategoryController extends Controller
 {
-    public function all(request $request)
+    public function all(Request $request)
     {
         $id = $request->input('id');
         $limit = $request->input('limit');

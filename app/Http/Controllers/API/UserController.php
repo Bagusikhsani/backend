@@ -13,7 +13,7 @@ use Laravel\Fortify\Rules\Password;
 
 class UserController extends Controller
 {
-    public function register(request $request)
+    public function register(Request $request)
     {
         try {
            $request->validate([
@@ -54,7 +54,7 @@ class UserController extends Controller
         }
     }
 
-    public function login(request $request)
+    public function login(Request $request)
     {
         try {
             $request->validate([
@@ -94,7 +94,7 @@ class UserController extends Controller
         return ResponseFormatter::success($request->user(), 'Data profile user berhasil diambil');
     }
 
-    public function updateProfile(request $request)
+    public function updateProfile(Request $request)
     {
         $request->validate([
             'email' => 'email|required',
